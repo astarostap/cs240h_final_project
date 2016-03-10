@@ -1,0 +1,447 @@
+
+==================== FINAL INTERFACE ====================
+2016-03-10 12:33:14.992686 UTC
+
+interface snaph_Lgd3Rz2BLGaKkSAAd4VWq6:TNTypes 7103
+  interface hash: f0ed6e3c37fe4ad424b80d693a0b5ef7
+  ABI hash: 25d68b9f8ad46f537656865954f7c3c6
+  export-list hash: c002d1c7dd5f3c2abcd80cefb09b82b9
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 4c0a7b65a6dddbc4161c2e2bfabe3dc3
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  TNTypes.TGraphInfo
+  TNTypes.TNEdge
+  TNTypes.TNGraph{TNTypes.TNGraph TNTypes.graphType TNTypes.table TNTypes.vertexValues}
+  TNTypes.TNGraphType{TNTypes.TNDGraph TNTypes.TNUGraph}
+  TNTypes.TNTable
+  TNTypes.TNTableBounds
+  TNTypes.TNVertex
+  TNTypes.TNVertexValue
+  TNTypes.TVertexValueMap
+module dependencies:
+package dependencies: array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA
+                      base-4.8.2.0* containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU*
+                      deepseq-1.4.1.1@deeps_6vMKxt5sPFR0XsbRWvvq59 ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Functor.Identity
+                         base-4.8.2.0:Data.Monoid base-4.8.2.0:Data.Type.Equality
+                         base-4.8.2.0:Data.Void base-4.8.2.0:GHC.Exts
+                         base-4.8.2.0:GHC.Generics
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Sequence
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Set.Base
+import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.2.0:GHC.Show 0e1d8380a8fb0cfb07ebeda3b70cbf38
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Graph e6c19c0862ef9a186b188295a6e5e748
+import  -/  containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map.Base 8b0bee2cbf19008d0429e93c882cbe4e
+import  -/  containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map.Strict 2e796f3ebd5f3ce783e00a01f5cdcaa8
+import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
+import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
+cd3fc179b5ea09be4b3383491abc2656
+  $fEqTNGraphType :: GHC.Classes.Eq TNTypes.TNGraphType
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ TNTypes.TNGraphType
+                  TNTypes.$fEqTNGraphType_$c==
+                  TNTypes.$fEqTNGraphType_$c/= -}
+cd3fc179b5ea09be4b3383491abc2656
+  $fEqTNGraphType_$c/= ::
+    TNTypes.TNGraphType -> TNTypes.TNGraphType -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ a :: TNTypes.TNGraphType b :: TNTypes.TNGraphType ->
+                 case a of wild {
+                   TNTypes.TNUGraph
+                   -> case b of wild1 {
+                        TNTypes.TNUGraph -> GHC.Types.False
+                        TNTypes.TNDGraph -> GHC.Types.True }
+                   TNTypes.TNDGraph
+                   -> case b of wild1 {
+                        TNTypes.TNUGraph -> GHC.Types.True
+                        TNTypes.TNDGraph -> GHC.Types.False } }) -}
+cd3fc179b5ea09be4b3383491abc2656
+  $fEqTNGraphType_$c== ::
+    TNTypes.TNGraphType -> TNTypes.TNGraphType -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ ds :: TNTypes.TNGraphType ds1 :: TNTypes.TNGraphType ->
+                 case ds of wild {
+                   TNTypes.TNUGraph
+                   -> case ds1 of wild1 {
+                        TNTypes.TNUGraph -> GHC.Types.True
+                        TNTypes.TNDGraph -> GHC.Types.False }
+                   TNTypes.TNDGraph
+                   -> case ds1 of wild1 {
+                        TNTypes.TNUGraph -> GHC.Types.False
+                        TNTypes.TNDGraph -> GHC.Types.True } }) -}
+cd3fc179b5ea09be4b3383491abc2656
+  $fOrdTNGraphType :: GHC.Classes.Ord TNTypes.TNGraphType
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ TNTypes.TNGraphType
+                  TNTypes.$fEqTNGraphType
+                  TNTypes.$fOrdTNGraphType_$ccompare
+                  TNTypes.$fOrdTNGraphType_$c<
+                  TNTypes.$fOrdTNGraphType_$c<=
+                  TNTypes.$fOrdTNGraphType_$c>
+                  TNTypes.$fOrdTNGraphType_$c>=
+                  TNTypes.$fOrdTNGraphType_$cmax
+                  TNTypes.$fOrdTNGraphType_$cmin -}
+cd3fc179b5ea09be4b3383491abc2656
+  $fOrdTNGraphType_$c< ::
+    TNTypes.TNGraphType -> TNTypes.TNGraphType -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ a :: TNTypes.TNGraphType b :: TNTypes.TNGraphType ->
+                 case a of wild {
+                   TNTypes.TNUGraph
+                   -> case b of wild1 {
+                        TNTypes.TNUGraph -> GHC.Types.False
+                        TNTypes.TNDGraph -> GHC.Types.True }
+                   TNTypes.TNDGraph
+                   -> case b of wild1 { DEFAULT -> GHC.Types.False } }) -}
+cd3fc179b5ea09be4b3383491abc2656
+  $fOrdTNGraphType_$c<= ::
+    TNTypes.TNGraphType -> TNTypes.TNGraphType -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ a :: TNTypes.TNGraphType b :: TNTypes.TNGraphType ->
+                 case a of wild {
+                   TNTypes.TNUGraph -> case b of wild1 { DEFAULT -> GHC.Types.True }
+                   TNTypes.TNDGraph
+                   -> case b of wild1 {
+                        TNTypes.TNUGraph -> GHC.Types.False
+                        TNTypes.TNDGraph -> GHC.Types.True } }) -}
+cd3fc179b5ea09be4b3383491abc2656
+  $fOrdTNGraphType_$c> ::
+    TNTypes.TNGraphType -> TNTypes.TNGraphType -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ a :: TNTypes.TNGraphType b :: TNTypes.TNGraphType ->
+                 case a of wild {
+                   TNTypes.TNUGraph -> case b of wild1 { DEFAULT -> GHC.Types.False }
+                   TNTypes.TNDGraph
+                   -> case b of wild1 {
+                        TNTypes.TNUGraph -> GHC.Types.True
+                        TNTypes.TNDGraph -> GHC.Types.False } }) -}
+cd3fc179b5ea09be4b3383491abc2656
+  $fOrdTNGraphType_$c>= ::
+    TNTypes.TNGraphType -> TNTypes.TNGraphType -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ a :: TNTypes.TNGraphType b :: TNTypes.TNGraphType ->
+                 case a of wild {
+                   TNTypes.TNUGraph
+                   -> case b of wild1 {
+                        TNTypes.TNUGraph -> GHC.Types.True
+                        TNTypes.TNDGraph -> GHC.Types.False }
+                   TNTypes.TNDGraph
+                   -> case b of wild1 { DEFAULT -> GHC.Types.True } }) -}
+cd3fc179b5ea09be4b3383491abc2656
+  $fOrdTNGraphType_$ccompare ::
+    TNTypes.TNGraphType -> TNTypes.TNGraphType -> GHC.Types.Ordering
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ a :: TNTypes.TNGraphType b :: TNTypes.TNGraphType ->
+                 case a of wild {
+                   TNTypes.TNUGraph
+                   -> case b of wild1 {
+                        TNTypes.TNUGraph -> GHC.Types.EQ TNTypes.TNDGraph -> GHC.Types.LT }
+                   TNTypes.TNDGraph
+                   -> case b of wild1 {
+                        TNTypes.TNUGraph -> GHC.Types.GT
+                        TNTypes.TNDGraph -> GHC.Types.EQ } }) -}
+cd3fc179b5ea09be4b3383491abc2656
+  $fOrdTNGraphType_$cmax ::
+    TNTypes.TNGraphType -> TNTypes.TNGraphType -> TNTypes.TNGraphType
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ x :: TNTypes.TNGraphType y :: TNTypes.TNGraphType ->
+                 case x of wild {
+                   TNTypes.TNUGraph -> y
+                   TNTypes.TNDGraph
+                   -> case y of wild1 { DEFAULT -> TNTypes.TNDGraph } }) -}
+cd3fc179b5ea09be4b3383491abc2656
+  $fOrdTNGraphType_$cmin ::
+    TNTypes.TNGraphType -> TNTypes.TNGraphType -> TNTypes.TNGraphType
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ x :: TNTypes.TNGraphType y :: TNTypes.TNGraphType ->
+                 case x of wild {
+                   TNTypes.TNUGraph -> case y of wild1 { DEFAULT -> TNTypes.TNUGraph }
+                   TNTypes.TNDGraph -> y }) -}
+426a917e7487723ae62048b9afba5a36
+  $fShowTNGraph :: GHC.Show.Show TNTypes.TNGraph
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ TNTypes.TNGraph
+                  TNTypes.$fShowTNGraph_$cshowsPrec
+                  TNTypes.$fShowTNGraph_$cshow
+                  TNTypes.$fShowTNGraph_$cshowList -}
+426a917e7487723ae62048b9afba5a36
+  $fShowTNGraph1 :: TNTypes.TNGraph -> GHC.Show.ShowS
+  {- Arity: 1,
+     Unfolding: (\ w :: TNTypes.TNGraph ->
+                 case w of ww { TNTypes.TNGraph ww1 ww2 ww3 ->
+                 TNTypes.$w$cshowsPrec 0 ww1 ww2 ww3 }) -}
+6dfdbf35d06b217326aa914be8bb5d8e
+  $fShowTNGraph2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "TNDGraph"#) -}
+d0453815fb5c3ca1ae58db785f1d4b0d
+  $fShowTNGraph3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "TNUGraph"#) -}
+c1825d30ff6a1b5b691d60762702ca15
+  $fShowTNGraph4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "graphType = "#) -}
+9e2495f54905a927e53d81b6fd2e3474
+  $fShowTNGraph5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "table = "#) -}
+518f34bad59d2f39eedb81f43716c3d0
+  $fShowTNGraph6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "TNGraph {"#) -}
+c9c38733b79a82f12998f30aa9b2c632
+  $fShowTNGraph7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "}"#) -}
+a5f62edb9dfb0deaad9018535f85abf0
+  $fShowTNGraph8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "vertexValues = "#) -}
+22468fda75a9d043104586dcfc5e52bb
+  $fShowTNGraph9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# ", "#) -}
+cd3fc179b5ea09be4b3383491abc2656
+  $fShowTNGraphType :: GHC.Show.Show TNTypes.TNGraphType
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ TNTypes.TNGraphType
+                  TNTypes.$fShowTNGraphType_$cshowsPrec
+                  TNTypes.$fShowTNGraphType_$cshow
+                  TNTypes.$fShowTNGraphType_$cshowList -}
+cd3fc179b5ea09be4b3383491abc2656
+  $fShowTNGraphType1 :: TNTypes.TNGraphType -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ ds :: TNTypes.TNGraphType eta :: GHC.Base.String ->
+                 case ds of wild {
+                   TNTypes.TNUGraph
+                   -> GHC.Base.augment
+                        @ GHC.Types.Char
+                        (\ @ b c :: GHC.Types.Char -> b -> b[OneShot] n :: b[OneShot] ->
+                         GHC.Base.foldr @ GHC.Types.Char @ b c n TNTypes.$fShowTNGraph3)
+                        eta
+                   TNTypes.TNDGraph
+                   -> GHC.Base.augment
+                        @ GHC.Types.Char
+                        (\ @ b c :: GHC.Types.Char -> b -> b[OneShot] n :: b[OneShot] ->
+                         GHC.Base.foldr @ GHC.Types.Char @ b c n TNTypes.$fShowTNGraph2)
+                        eta }) -}
+cd3fc179b5ea09be4b3383491abc2656
+  $fShowTNGraphType_$cshow :: TNTypes.TNGraphType -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: TNTypes.TNGraphType ->
+                 case x of wild {
+                   TNTypes.TNUGraph -> TNTypes.$fShowTNGraph3
+                   TNTypes.TNDGraph -> TNTypes.$fShowTNGraph2 }) -}
+cd3fc179b5ea09be4b3383491abc2656
+  $fShowTNGraphType_$cshowList ::
+    [TNTypes.TNGraphType] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ TNTypes.TNGraphType
+                   TNTypes.$fShowTNGraphType1) -}
+cd3fc179b5ea09be4b3383491abc2656
+  $fShowTNGraphType_$cshowsPrec ::
+    GHC.Types.Int -> TNTypes.TNGraphType -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ ds :: GHC.Types.Int
+                   ds1 :: TNTypes.TNGraphType
+                   eta :: GHC.Base.String ->
+                 case ds1 of wild {
+                   TNTypes.TNUGraph
+                   -> GHC.Base.augment
+                        @ GHC.Types.Char
+                        (\ @ b c :: GHC.Types.Char -> b -> b[OneShot] n :: b[OneShot] ->
+                         GHC.Base.foldr @ GHC.Types.Char @ b c n TNTypes.$fShowTNGraph3)
+                        eta
+                   TNTypes.TNDGraph
+                   -> GHC.Base.augment
+                        @ GHC.Types.Char
+                        (\ @ b c :: GHC.Types.Char -> b -> b[OneShot] n :: b[OneShot] ->
+                         GHC.Base.foldr @ GHC.Types.Char @ b c n TNTypes.$fShowTNGraph2)
+                        eta }) -}
+426a917e7487723ae62048b9afba5a36
+  $fShowTNGraph_$cshow :: TNTypes.TNGraph -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(U(U,U,U,U),U,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: TNTypes.TNGraph ->
+                 TNTypes.$fShowTNGraph_$cshowsPrec
+                   GHC.Show.shows18
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+426a917e7487723ae62048b9afba5a36
+  $fShowTNGraph_$cshowList :: [TNTypes.TNGraph] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ TNTypes.TNGraph
+                   TNTypes.$fShowTNGraph1) -}
+426a917e7487723ae62048b9afba5a36
+  $fShowTNGraph_$cshowsPrec ::
+    GHC.Types.Int -> TNTypes.TNGraph -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U(U)><S,1*U(U(U,U,U,U),U,1*U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: GHC.Types.Int w1 :: TNTypes.TNGraph ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { TNTypes.TNGraph ww3 ww4 ww5 ->
+                 TNTypes.$w$cshowsPrec ww1 ww3 ww4 ww5 } }) -}
+a59a983dba0d41f53b5287770e4c9603
+  $w$cshowsPrec ::
+    GHC.Prim.Int#
+    -> TNTypes.TNTable [TNTypes.TNVertex]
+    -> TNTypes.TNGraphType
+    -> TNTypes.TVertexValueMap
+    -> GHC.Show.ShowS
+  {- Arity: 4, Strictness: <L,U><L,U(U,U,U,U)><L,U><L,1*U>,
+     Inline: [0],
+     Unfolding: (\ ww :: GHC.Prim.Int#
+                   ww1 :: TNTypes.TNTable [TNTypes.TNVertex]
+                   ww2 :: TNTypes.TNGraphType
+                   ww3 :: TNTypes.TVertexValueMap ->
+                 let {
+                   f :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Arr.$w$cshowsPrec
+                       @ GHC.Types.Int
+                       @ [TNTypes.TNVertex]
+                       GHC.Arr.$fIxInt
+                       GHC.Show.$fShowInt
+                       GHC.Show.$fShow[]_$s$fShow[]
+                       0
+                       ww1
+                 } in
+                 let {
+                   f1 :: GHC.Base.String -> GHC.Base.String
+                   = Data.Map.Base.$w$cshowsPrec
+                       @ GHC.Types.Int
+                       @ GHC.Types.Float
+                       GHC.Show.$fShowInt
+                       GHC.Float.$fShowFloat
+                       0
+                       ww3
+                 } in
+                 let {
+                   g :: GHC.Base.String -> GHC.Base.String
+                     {- Arity: 1, Strictness: <L,1*U> -}
+                   = \ x :: GHC.Base.String ->
+                     GHC.Base.++
+                       @ GHC.Types.Char
+                       TNTypes.$fShowTNGraph9
+                       (GHC.Base.++
+                          @ GHC.Types.Char
+                          TNTypes.$fShowTNGraph8
+                          (f1 (GHC.Base.++ @ GHC.Types.Char TNTypes.$fShowTNGraph7 x)))
+                 } in
+                 let {
+                   p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,1*U> -}
+                   = \ x :: GHC.Base.String ->
+                     GHC.Base.++
+                       @ GHC.Types.Char
+                       TNTypes.$fShowTNGraph6
+                       (GHC.Base.++
+                          @ GHC.Types.Char
+                          TNTypes.$fShowTNGraph5
+                          (f (GHC.Base.++
+                                @ GHC.Types.Char
+                                TNTypes.$fShowTNGraph9
+                                (GHC.Base.++
+                                   @ GHC.Types.Char
+                                   TNTypes.$fShowTNGraph4
+                                   (case ww2 of wild {
+                                      TNTypes.TNUGraph
+                                      -> GHC.Base.++ @ GHC.Types.Char TNTypes.$fShowTNGraph3 (g x)
+                                      TNTypes.TNDGraph
+                                      -> GHC.Base.++
+                                           @ GHC.Types.Char
+                                           TNTypes.$fShowTNGraph2
+                                           (g x) })))))
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11) of wild {
+                   GHC.Types.False -> p
+                   GHC.Types.True
+                   -> \ x :: GHC.Base.String ->
+                      GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows9
+                        (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows8 x)) }) -}
+12f6b461189f936229f0ecb081ef0276
+  type TGraphInfo = ([TNTypes.TNEdge], TNTypes.TVertexValueMap)
+6129a8e35d9064c0db69c1a14eaf18d5
+  type TNEdge = Data.Graph.Edge
+426a917e7487723ae62048b9afba5a36
+  data TNGraph
+    = TNGraph {table :: TNTypes.TNTable [TNTypes.TNVertex],
+               graphType :: TNTypes.TNGraphType,
+               vertexValues :: TNTypes.TVertexValueMap}
+cd3fc179b5ea09be4b3383491abc2656
+  data TNGraphType = TNUGraph | TNDGraph
+    Promotable
+e2b5f3e3a5422570627447e6606ba244
+  type TNTable a = Data.Graph.Table a
+1d6130a05d93fbc1120848dece6a0bb6
+  type TNTableBounds = Data.Graph.Bounds
+cd35c0648eef8e31cf80b9584b0f3d18
+  type TNVertex = Data.Graph.Vertex
+ead5c5b245bdf9918829aa655c5f67d7
+  type TNVertexValue = GHC.Types.Float
+342884cd07fc946141bbf2a5cd18d412
+  type TVertexValueMap =
+    Data.Map.Base.Map TNTypes.TNVertex TNTypes.TNVertexValue
+c66c34168388bb8e28f0a5818b341871
+  graphType :: TNTypes.TNGraph -> TNTypes.TNGraphType
+  RecSel TNTypes.TNGraph
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSL),1*U(A,1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: TNTypes.TNGraph ->
+                 case ds of wild { TNTypes.TNGraph ds1 ds2 ds3 -> ds2 }) -}
+185ca38d2e5012009a11446ab58a83fa
+  table :: TNTypes.TNGraph -> TNTypes.TNTable [TNTypes.TNVertex]
+  RecSel TNTypes.TNGraph
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(SLL),1*U(1*U(U,U,U,U),A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: TNTypes.TNGraph ->
+                 case ds of wild { TNTypes.TNGraph ds1 ds2 ds3 -> ds1 }) -}
+d10a63ce6aa0d82df5598dffdb258745
+  vertexValues :: TNTypes.TNGraph -> TNTypes.TVertexValueMap
+  RecSel TNTypes.TNGraph
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: TNTypes.TNGraph ->
+                 case ds of wild { TNTypes.TNGraph ds1 ds2 ds3 -> ds3 }) -}
+instance GHC.Classes.Eq [TNTypes.TNGraphType]
+  = TNTypes.$fEqTNGraphType
+instance GHC.Classes.Ord [TNTypes.TNGraphType]
+  = TNTypes.$fOrdTNGraphType
+instance GHC.Show.Show [TNTypes.TNGraph] = TNTypes.$fShowTNGraph
+instance GHC.Show.Show [TNTypes.TNGraphType]
+  = TNTypes.$fShowTNGraphType
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

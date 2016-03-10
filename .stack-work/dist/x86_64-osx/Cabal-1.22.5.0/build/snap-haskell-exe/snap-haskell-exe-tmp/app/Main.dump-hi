@@ -1,0 +1,209 @@
+
+==================== FINAL INTERFACE ====================
+2016-03-10 11:59:29.358446 UTC
+
+interface main@main:Main 7103
+  interface hash: ced2eb7d4a7aa6226fdec049c37e80ca
+  ABI hash: b4917a26fe8f47ad9e28877827fffde0
+  export-list hash: 2e56a88320c8dde384074fde56f43f20
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: d38da38859f20cf730acb33a7d515d5b
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.main
+  Main.performGibbsSampling
+module dependencies:
+package dependencies: mtl-2.2.1@FU2dgI72hN9AAckXjzRNTy
+                      random-1.1@IQxsFMAJSrCF7cHNxD7bSI
+                      array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA base-4.8.2.0
+                      binary-0.7.5.0@binar_3uXFWMoAGBg0xKP9MHKRwi
+                      bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6
+                      containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU
+                      deepseq-1.4.1.1@deeps_6vMKxt5sPFR0XsbRWvvq59 ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0 parsec-3.1.9@parse_8vELjwlXlEQCYrSiiBnCcm
+                      snap-haskell-0.1.0.0@snaph_Lgd3Rz2BLGaKkSAAd4VWq6
+                      text-1.2.2.0@text_5c7VCmRXJenGcMPs3kwpkI
+                      time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn
+                      transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+         binary-0.7.5.0@binar_3uXFWMoAGBg0xKP9MHKRwi:Data.Binary.Generic
+         bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6:Data.ByteString.Builder
+         text-1.2.2.0@text_5c7VCmRXJenGcMPs3kwpkI:Data.Text
+         text-1.2.2.0@text_5c7VCmRXJenGcMPs3kwpkI:Data.Text.Lazy
+         text-1.2.2.0@text_5c7VCmRXJenGcMPs3kwpkI:Data.Text.Show
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.Calendar.Gregorian
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.Format.Parse
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.LocalTime.LocalTime
+         transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF:Control.Monad.Trans.Error
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Functor.Identity
+                         base-4.8.2.0:Data.Monoid base-4.8.2.0:Data.Type.Equality
+                         base-4.8.2.0:Data.Void base-4.8.2.0:GHC.Exts
+                         base-4.8.2.0:GHC.Generics
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.IntMap.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.IntSet.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Sequence
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Set.Base
+                         text-1.2.2.0@text_5c7VCmRXJenGcMPs3kwpkI:Data.Text
+                         text-1.2.2.0@text_5c7VCmRXJenGcMPs3kwpkI:Data.Text.Lazy
+import  -/  random-1.1@IQxsFMAJSrCF7cHNxD7bSI:System.Random f846d7495aa22d6383669937e7654c9b
+import  -/  base-4.8.2.0:Data.Either e8724afd65fd432cfe9a54014f5f762d
+import  -/  base-4.8.2.0:Data.Foldable 2ce969969ad5231eb40bd713f94f05ad
+import  -/  base-4.8.2.0:Data.Tuple 012ad951a59a9d85fe1de36a2f012986
+import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.2.0:GHC.IO bb5b81adcea33b14bd4abe16d7dde45f
+import  -/  base-4.8.2.0:GHC.Show 0e1d8380a8fb0cfb07ebeda3b70cbf38
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  base-4.8.2.0:System.Environment ba6e36000c8274703cf7786fbe8d0f6c
+import  -/  base-4.8.2.0:System.Exit f5581af4ad998e898da01fdc74c2769b
+import  -/  base-4.8.2.0:System.IO 0899686bfc1d9ef72dff3de85e99862a
+import  -/  containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map bf7758bd12b23a367777a33fd16e39de
+import  -/  containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map.Base 8b0bee2cbf19008d0429e93c882cbe4e
+import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
+import  -/  snap-haskell-0.1.0.0@snaph_Lgd3Rz2BLGaKkSAAd4VWq6:GibbsSampler dc6a29b68b7e9217a815a954f4178259
+import  -/  snap-haskell-0.1.0.0@snaph_Lgd3Rz2BLGaKkSAAd4VWq6:TNGraph b486a3673ceca70b3e0d8749943152af
+import  -/  snap-haskell-0.1.0.0@snaph_Lgd3Rz2BLGaKkSAAd4VWq6:TNParser d32b33e0a883319e2070133c1d995ec4
+import  -/  snap-haskell-0.1.0.0@snaph_Lgd3Rz2BLGaKkSAAd4VWq6:TNTypes 25d68b9f8ad46f537656865954f7c3c6
+47a46356669cf8851840d511c490a0dc
+  $wa ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>, Inline: [0],
+     Unfolding: (\ w :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   Main.main5
+                   GHC.Types.True
+                   w) -}
+be9d347af4443802443e1e766d1da292
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
+fab6f0eb4e36549176c50678ac2b8f88
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case System.Environment.getArgs1 s of ds1 { (#,#) ipv ipv1 ->
+                 case System.Random.theStdGen
+                        `cast`
+                      (GHC.IORef.NTCo:IORef[0] <System.Random.StdGen>_N) of wild { GHC.STRef.STRef var# ->
+                 case GHC.Prim.readMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ System.Random.StdGen
+                        var#
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case ipv1 of wild1 {
+                   [] -> Main.$wa ipv2
+                   : ds ds3
+                   -> case GHC.Base.eqString ds Main.main4 of wild2 {
+                        GHC.Types.False -> Main.$wa ipv2
+                        GHC.Types.True
+                        -> case ds3 of wild3 {
+                             [] -> Main.$wa ipv2
+                             : string ds4
+                             -> case ds4 of wild4 {
+                                  [] -> Main.$wa ipv2
+                                  : int ds5
+                                  -> case ds5 of wild5 {
+                                       [] -> Main.main3 string Main.main2 ipv3 ipv2
+                                       : ipv4 ipv5 -> Main.$wa ipv2 } } } } } } } }) -}
+8313fd8ca24f2cfc5d19e90330e91ca2
+  main2 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 10) -}
+8763a094a17e96ab015219cd815877b6
+  main3 ::
+    GHC.IO.FilePath
+    -> GHC.Types.Int
+    -> System.Random.StdGen
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 4, Strictness: <L,U><L,1*U(U)><L,U><L,U>,
+     Unfolding: (\ file :: GHC.IO.FilePath
+                   numSamples :: GHC.Types.Int
+                   randGen :: System.Random.StdGen
+                   eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case GHC.IO.Handle.FD.openFile1
+                        file
+                        GHC.IO.IOMode.ReadMode
+                        eta of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Text.hGetContents1
+                        ipv1
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case TNParser.parseTNGraphEdgesFile ipv3 of wild {
+                   Data.Either.Left msg
+                   -> GHC.Prim.raiseIO#
+                        @ GHC.Exception.SomeException
+                        @ ()
+                        (GHC.IO.Exception.$fExceptionIOException_$ctoException
+                           (GHC.IO.Exception.IOError
+                              (GHC.Base.Nothing @ GHC.IO.Handle.Types.Handle)
+                              GHC.IO.Exception.UserError
+                              (GHC.Types.[] @ GHC.Types.Char)
+                              (GHC.Base.++
+                                 @ GHC.Types.Char
+                                 file
+                                 (GHC.CString.unpackAppendCString# ": "# msg))
+                              (GHC.Base.Nothing @ Foreign.C.Types.CInt)
+                              (GHC.Base.Nothing @ GHC.IO.FilePath)))
+                        ipv2
+                   Data.Either.Right xGraph
+                   -> GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        (case numSamples of ww { GHC.Types.I# ww1 ->
+                         case GibbsSampler.$wgetPosteriorSamplingRecursive
+                                xGraph
+                                (GibbsSampler.zerosInitializer xGraph)
+                                ww1
+                                0
+                                (GibbsSampler.zerosInitializer xGraph)
+                                randGen of ww4 { (#,,#) ww5 ww6 ww7 ->
+                         Main.main_go10 (GHC.Types.[] @ GHC.Types.Char) ww7 } })
+                        GHC.Types.True
+                        ipv2 } } }) -}
+c312ef6140ccefa242de947489d6e4af
+  main4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "gibbs"#) -}
+ba896e09f98df4ac5d4cfcd3f62202ba
+  main5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Usage: snap-haskell-exe gibbs <input-file> <num-samples>"#) -}
+883b4232165ff1ee59da5a0b752dd541
+  main6 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R))) -}
+970d5a5b4f1aba2483add5cc613e63ce
+  main_go10 ::
+    [GHC.Types.Char]
+    -> Data.Map.Base.Map GHC.Types.Int GHC.Types.Float
+    -> [GHC.Types.Char]
+  {- Arity: 2, Strictness: <L,1*U><S,1*U> -}
+c4355d2991785ddfdb68a101218473a2
+  performGibbsSampling ::
+    GHC.IO.FilePath
+    -> GHC.Types.Int -> System.Random.StdGen -> GHC.Types.IO ()
+  {- Arity: 4, Strictness: <L,U><L,1*U(U)><L,U><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main3
+                  `cast`
+                (<GHC.IO.FilePath>_R
+                 ->_R <GHC.Types.Int>_R
+                 ->_R <System.Random.StdGen>_R
+                 ->_R Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

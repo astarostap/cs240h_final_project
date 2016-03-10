@@ -1,0 +1,131 @@
+
+==================== FINAL INTERFACE ====================
+2016-03-10 09:19:20.776071 UTC
+
+interface snaph_Lgd3Rz2BLGaKkSAAd4VWq6:TNPrimitiveFunctions 7103
+  interface hash: ca1273c102abda4cb5600e19015a1bb9
+  ABI hash: 8abdbc5b612eceea9b04340efe135ea5
+  export-list hash: 6b3e2516ed5644e76733dd25042b1eed
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 4c0a7b65a6dddbc4161c2e2bfabe3dc3
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  TNPrimitiveFunctions.bcComponents
+  TNPrimitiveFunctions.components
+  TNPrimitiveFunctions.edges
+  TNPrimitiveFunctions.outdegree
+  TNPrimitiveFunctions.path
+  TNPrimitiveFunctions.reachable
+  TNPrimitiveFunctions.scComponents
+  TNPrimitiveFunctions.topsort
+  TNPrimitiveFunctions.vertices
+module dependencies: TNTypes
+package dependencies: array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA
+                      base-4.8.2.0* containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU*
+                      deepseq-1.4.1.1@deeps_6vMKxt5sPFR0XsbRWvvq59 ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Functor.Identity
+                         base-4.8.2.0:Data.Monoid base-4.8.2.0:Data.Type.Equality
+                         base-4.8.2.0:Data.Void base-4.8.2.0:GHC.Exts
+                         base-4.8.2.0:GHC.Generics
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Sequence
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Set.Base
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Graph e6c19c0862ef9a186b188295a6e5e748
+import  -/  containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Tree f0b7807efc082fbe02bdb2290b2a6c88
+import  -/  TNTypes 25d68b9f8ad46f537656865954f7c3c6
+  exports: c002d1c7dd5f3c2abcd80cefb09b82b9
+  TNEdge 6129a8e35d9064c0db69c1a14eaf18d5
+  TNGraph 4551fb9b00b46d134fa16a3f676f834b
+  TNGraph 426a917e7487723ae62048b9afba5a36
+  TNTable e2b5f3e3a5422570627447e6606ba244
+  TNVertex cd35c0648eef8e31cf80b9584b0f3d18
+  table 185ca38d2e5012009a11446ab58a83fa
+1ea3fc72a53eedcc033b5a583889b4a7
+  bcComponents ::
+    TNTypes.TNGraph -> Data.Tree.Forest [TNTypes.TNVertex]
+  {- Arity: 1, Strictness: <S(S(SSLL)LL),1*U(U(U(U),U(U),A,U),A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: TNTypes.TNGraph ->
+                 case ds of wild { TNTypes.TNGraph ds1 ds2 ds3 ->
+                 Data.Graph.bcc ds1 }) -}
+0eb3a58b3cca1369178285fd2002ad26
+  components :: TNTypes.TNGraph -> Data.Tree.Forest TNTypes.TNVertex
+  {- Arity: 1, Strictness: <S(S(SSLL)LL),1*U(U(U(U),U(U),A,U),A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: TNTypes.TNGraph ->
+                 case ds of wild { TNTypes.TNGraph ds1 ds2 ds3 ->
+                 Data.Graph.components ds1 }) -}
+0c7e5a83861238d9dc31ad42eafba0fb
+  edges :: TNTypes.TNGraph -> [TNTypes.TNEdge]
+  {- Arity: 1,
+     Strictness: <S(S(SSLL)LL),1*U(1*U(U(U),U(U),A,U),A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: TNTypes.TNGraph ->
+                 case ds of wild { TNTypes.TNGraph ds1 ds2 ds3 ->
+                 Data.Graph.edges ds1 }) -}
+49a807b36343fcb03ae02dabbb731cbb
+  outdegree :: TNTypes.TNGraph -> TNTypes.TNTable GHC.Types.Int
+  {- Arity: 1,
+     Strictness: <S(S(SSLL)LL),1*U(1*U(U(U),U(U),A,U),A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: TNTypes.TNGraph ->
+                 case ds of wild { TNTypes.TNGraph ds1 ds2 ds3 ->
+                 Data.Graph.outdegree ds1 }) -}
+03048f3ef8e46600a187fde26a01d916
+  path ::
+    TNTypes.TNGraph
+    -> TNTypes.TNVertex -> TNTypes.TNVertex -> GHC.Types.Bool
+  {- Arity: 3,
+     Strictness: <S(S(SSLL)LL),1*U(1*U(U(U),U(U),A,U),A,A)><L,U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ ds :: TNTypes.TNGraph
+                   start :: TNTypes.TNVertex
+                   dest :: TNTypes.TNVertex ->
+                 case ds of wild { TNTypes.TNGraph ds1 ds2 ds3 ->
+                 Data.Graph.path ds1 start dest }) -}
+c5a9f61da8d719967974547256929151
+  reachable ::
+    TNTypes.TNGraph -> TNTypes.TNVertex -> [TNTypes.TNVertex]
+  {- Arity: 2,
+     Strictness: <S(S(SSLL)LL),1*U(1*U(U(U),U(U),A,U),A,A)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ ds :: TNTypes.TNGraph vertex :: TNTypes.TNVertex ->
+                 case ds of wild { TNTypes.TNGraph ds1 ds2 ds3 ->
+                 Data.Graph.reachable ds1 vertex }) -}
+f5d1635affecebbc2280410c7da3902c
+  scComponents ::
+    TNTypes.TNGraph -> Data.Tree.Forest TNTypes.TNVertex
+  {- Arity: 1, Strictness: <S(S(SSLL)LL),1*U(U(U(U),U(U),A,U),A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: TNTypes.TNGraph ->
+                 case ds of wild { TNTypes.TNGraph ds1 ds2 ds3 ->
+                 Data.Graph.scc ds1 }) -}
+12da84763c776acbfbb001c11467e0c0
+  topsort :: TNTypes.TNGraph -> [TNTypes.TNVertex]
+  {- Arity: 1, Strictness: <S(S(SSLL)LL),1*U(U(U(U),U(U),A,U),A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: TNTypes.TNGraph ->
+                 case ds of wild { TNTypes.TNGraph ds1 ds2 ds3 ->
+                 Data.Graph.topSort ds1 }) -}
+6b5636a0df092db0a2190da28e886d56
+  vertices :: TNTypes.TNGraph -> [TNTypes.TNVertex]
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(S(SSLL)LL),1*U(1*U(U(U),U(U),A,A),A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: TNTypes.TNGraph ->
+                 case ds of wild { TNTypes.TNGraph ds1 ds2 ds3 ->
+                 Data.Graph.$sindices @ [Data.Graph.Vertex] ds1 }) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

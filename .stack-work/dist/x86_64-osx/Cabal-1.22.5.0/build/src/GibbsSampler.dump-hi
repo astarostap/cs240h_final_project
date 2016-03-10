@@ -1,0 +1,394 @@
+
+==================== FINAL INTERFACE ====================
+2016-03-10 12:01:41.091075 UTC
+
+interface snaph_Lgd3Rz2BLGaKkSAAd4VWq6:GibbsSampler 7103
+  interface hash: c7a4ce648053265022842c5954aaa3b6
+  ABI hash: dc6a29b68b7e9217a815a954f4178259
+  export-list hash: 4313e43c922a9cdd34f9ff53f00581ca
+  orphan hash: e62b3408292d50d1b495695424792466
+  flag hash: 4c0a7b65a6dddbc4161c2e2bfabe3dc3
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  GibbsSampler.getPosteriorSampling
+  GibbsSampler.randomInitializer
+  GibbsSampler.zerosInitializer
+module dependencies: TNGraph TNParser TNPrimitiveFunctions TNTypes
+package dependencies: mtl-2.2.1@FU2dgI72hN9AAckXjzRNTy
+                      random-1.1@IQxsFMAJSrCF7cHNxD7bSI
+                      array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA base-4.8.2.0
+                      binary-0.7.5.0@binar_3uXFWMoAGBg0xKP9MHKRwi
+                      bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6
+                      containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU
+                      deepseq-1.4.1.1@deeps_6vMKxt5sPFR0XsbRWvvq59 ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0 parsec-3.1.9@parse_8vELjwlXlEQCYrSiiBnCcm
+                      text-1.2.2.0@text_5c7VCmRXJenGcMPs3kwpkI
+                      time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn
+                      transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+         binary-0.7.5.0@binar_3uXFWMoAGBg0xKP9MHKRwi:Data.Binary.Generic
+         bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6:Data.ByteString.Builder
+         text-1.2.2.0@text_5c7VCmRXJenGcMPs3kwpkI:Data.Text
+         text-1.2.2.0@text_5c7VCmRXJenGcMPs3kwpkI:Data.Text.Lazy
+         text-1.2.2.0@text_5c7VCmRXJenGcMPs3kwpkI:Data.Text.Show
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.Calendar.Gregorian
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.Format.Parse
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.LocalTime.LocalTime
+         transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF:Control.Monad.Trans.Error
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Functor.Identity
+                         base-4.8.2.0:Data.Monoid base-4.8.2.0:Data.Type.Equality
+                         base-4.8.2.0:Data.Void base-4.8.2.0:GHC.Exts
+                         base-4.8.2.0:GHC.Generics
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.IntMap.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.IntSet.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Sequence
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Set.Base
+                         text-1.2.2.0@text_5c7VCmRXJenGcMPs3kwpkI:Data.Text
+                         text-1.2.2.0@text_5c7VCmRXJenGcMPs3kwpkI:Data.Text.Lazy
+import  -/  random-1.1@IQxsFMAJSrCF7cHNxD7bSI:System.Random f846d7495aa22d6383669937e7654c9b
+import  -/  base-4.8.2.0:Data.Either e8724afd65fd432cfe9a54014f5f762d
+import  -/  base-4.8.2.0:Data.Foldable 2ce969969ad5231eb40bd713f94f05ad
+import  -/  base-4.8.2.0:Data.Maybe 1cb58de2b04ee3c0c0a7dc9201184aff
+import  -/  base-4.8.2.0:Data.Tuple 012ad951a59a9d85fe1de36a2f012986
+import  -/  base-4.8.2.0:Debug.Trace 6660afb6094d69397ea084364da8f950
+import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.2.0:GHC.Float e532d434ec2447d809887c0fca1d78a5
+import  -/  base-4.8.2.0:GHC.IO bb5b81adcea33b14bd4abe16d7dde45f
+import  -/  base-4.8.2.0:GHC.List 0c736920522bbd14b770342776012ab6
+import  -/  base-4.8.2.0:GHC.Num 9f42750c866f5832ca565146bd660c60
+import  -/  base-4.8.2.0:GHC.Real 1281efa9baf803bc7859d7efb89a38b3
+import  -/  base-4.8.2.0:GHC.Show 0e1d8380a8fb0cfb07ebeda3b70cbf38
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  base-4.8.2.0:System.IO 0899686bfc1d9ef72dff3de85e99862a
+import  -/  containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map bf7758bd12b23a367777a33fd16e39de
+import  -/  containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map.Base 8b0bee2cbf19008d0429e93c882cbe4e
+import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
+import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
+import  -/  TNGraph b486a3673ceca70b3e0d8749943152af
+  exports: 46ed0ff638d7eb91425b970c4d36eaa6
+  addValuesToGraph 95f5187dd42c41f1bcb970f133721943
+  buildTNGraphFromInfo bc3e71ddff8c43b4efba2ac63df2c364
+  convertGraph 5182430bb1815a681f8f4f6ed1b4e5ec
+  divideGraphValuesBy 0f6b0e3a8f32c74121c218f4b332179d
+  getNeighbors eddb75f0ce84bebe673cae3b26fdabf5
+  getValue d0c4046f6e323324cb31627c4c45e99a
+import  -/  TNParser d32b33e0a883319e2070133c1d995ec4
+  exports: aea19c923056e1cacdef671ab6db5174
+  parseTNGraphEdgesFile efb507ace7bede1afd4e6027a6521036
+import  -/  TNPrimitiveFunctions 8abdbc5b612eceea9b04340efe135ea5
+  exports: 6b3e2516ed5644e76733dd25042b1eed
+  vertices 6b5636a0df092db0a2190da28e886d56
+import  -/  TNTypes 25d68b9f8ad46f537656865954f7c3c6
+  exports: c002d1c7dd5f3c2abcd80cefb09b82b9
+  TNDGraph 844be5a3e9caac7894ca8a72f5556fda
+  TNGraph 4551fb9b00b46d134fa16a3f676f834b
+  TNGraph 426a917e7487723ae62048b9afba5a36
+  TNUGraph 248301ee9c167803caf73426386c5988
+  TNVertex cd35c0648eef8e31cf80b9584b0f3d18
+  TNVertexValue ead5c5b245bdf9918829aa655c5f67d7
+  TVertexValueMap 342884cd07fc946141bbf2a5cd18d412
+  graphType c66c34168388bb8e28f0a5818b341871
+  table 185ca38d2e5012009a11446ab58a83fa
+  vertexValues d10a63ce6aa0d82df5598dffdb258745
+cc38a2806e5b360ebe7f56284effff32
+  $sfromList ::
+    [(TNTypes.TNVertex, a)] -> Data.Map.Base.Map TNTypes.TNVertex a
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ @ a ds :: [(TNTypes.TNVertex, a)] ->
+                 case ds of wild {
+                   [] -> Data.Map.Base.Tip @ TNTypes.TNVertex @ a
+                   : ds1 ds2
+                   -> case ds1 of wild1 { (,) kx x ->
+                      case ds2 of wild2 {
+                        []
+                        -> case kx of dt { GHC.Types.I# ipv ->
+                           Data.Map.Base.Bin
+                             @ TNTypes.TNVertex
+                             @ a
+                             1
+                             dt
+                             x
+                             (Data.Map.Base.Tip @ TNTypes.TNVertex @ a)
+                             (Data.Map.Base.Tip @ TNTypes.TNVertex @ a) }
+                        : ipv ipv1
+                        -> case ipv of wild3 { (,) ky ds3 ->
+                           case kx of wild4 { GHC.Types.I# x1 ->
+                           case ky of wild5 { GHC.Types.I# y ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.>=# x1 y) of wild6 {
+                             GHC.Types.False
+                             -> GibbsSampler.$wpoly_go10
+                                  @ a
+                                  1
+                                  (Data.Map.Base.Bin
+                                     @ TNTypes.TNVertex
+                                     @ a
+                                     1
+                                     wild4
+                                     x
+                                     (Data.Map.Base.Tip @ TNTypes.TNVertex @ a)
+                                     (Data.Map.Base.Tip @ TNTypes.TNVertex @ a))
+                                  wild2
+                             GHC.Types.True
+                             -> GibbsSampler.$sfromList1
+                                  @ a
+                                  (Data.Map.Base.Bin
+                                     @ TNTypes.TNVertex
+                                     @ a
+                                     1
+                                     wild4
+                                     x
+                                     (Data.Map.Base.Tip @ TNTypes.TNVertex @ a)
+                                     (Data.Map.Base.Tip @ TNTypes.TNVertex @ a))
+                                  wild2 } } } } } } }) -}
+95d4dc697e89969a02ca02add86dc163
+  $sfromList1 ::
+    Data.Map.Base.Map TNTypes.TNVertex a1
+    -> [(TNTypes.TNVertex, a1)]
+    -> Data.Map.Base.Map TNTypes.TNVertex a1
+  {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+062df3f504db594eeafe04bb6ae7a631
+  $w$sgo10 ::
+    GHC.Prim.Int#
+    -> a1
+    -> Data.Map.Base.Map TNTypes.TNVertex a1
+    -> Data.Map.Base.Map TNTypes.TNVertex a1
+  {- Arity: 3, Strictness: <L,U><L,U><S,1*U>, Inline: [0] -}
+cc10b9f44856529557875b3f970c9c4f
+  $wgetPosteriorSamplingRecursive ::
+    TNTypes.TNGraph
+    -> TNTypes.TNGraph
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> TNTypes.TNGraph
+    -> System.Random.StdGen
+    -> (# TNTypes.TNTable [TNTypes.TNVertex],
+          TNTypes.TNGraphType,
+          TNTypes.TVertexValueMap #)
+  {- Arity: 6,
+     Strictness: <L,U(U(U(U),U(U),A,U),A,U)><L,U(A,A,U)><L,U><L,U><L,U(U,U,U)><L,U>,
+     Inline: [0] -}
+027d345920dd1a451a1cbd3f9a9467da
+  $wgo :: System.Random.StdGen -> GHC.Prim.Int# -> [GHC.Types.Float]
+  {- Arity: 2, Strictness: <L,U><S,1*U>, Inline: [0] -}
+c24fff11a7b8f0dbffe36fc0f777dedb
+  $wpoly_go10 ::
+    GHC.Prim.Int#
+    -> Data.Map.Base.Map TNTypes.TNVertex a
+    -> [(TNTypes.TNVertex, a)]
+    -> Data.Map.Base.Map TNTypes.TNVertex a
+  {- Arity: 3, Strictness: <L,U><S,1*U><S,1*U>, Inline: [0] -}
+b50c765f4cac2c2f9cce8e8155480818
+  $wrandomInitializer ::
+    TNTypes.TNGraph
+    -> System.Random.StdGen
+    -> (# TNTypes.TNTable [TNTypes.TNVertex],
+          TNTypes.TNGraphType,
+          TNTypes.TVertexValueMap #)
+  {- Arity: 2, Strictness: <L,U(U(U(U),U(U),U,U),1*U,A)><L,U>,
+     Inline: [0],
+     Unfolding: (\ w :: TNTypes.TNGraph w1 :: System.Random.StdGen ->
+                 (# case w of wild { TNTypes.TNGraph ds ds1 ds2 -> ds },
+                    case w of wild { TNTypes.TNGraph ds ds1 ds2 -> ds1 },
+                    case w of wild { TNTypes.TNGraph ds1 ds2 ds3 ->
+                    case ds1 of wild1 { GHC.Arr.Array l u dt ds4 ->
+                    case l of wild2 { GHC.Types.I# x ->
+                    case u of wild3 { GHC.Types.I# y ->
+                    case GHC.Prim.tagToEnum#
+                           @ GHC.Types.Bool
+                           (GHC.Prim.># x y) of wild4 {
+                      GHC.Types.False
+                      -> letrec {
+                           go1 :: GHC.Prim.Int#
+                                  -> [GHC.Types.Float] -> [(GHC.Types.Int, GHC.Types.Float)]
+                             {- Arity: 2, Strictness: <L,U><S,1*U> -}
+                           = \ x1 :: GHC.Prim.Int# eta :: [GHC.Types.Float] ->
+                             case eta of wild5 {
+                               [] -> GHC.Types.[] @ (GHC.Types.Int, GHC.Types.Float)
+                               : y1 ys
+                               -> GHC.Types.:
+                                    @ (GHC.Types.Int, GHC.Types.Float)
+                                    (GHC.Types.I# x1, y1)
+                                    (case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.==# x1 y) of wild6 {
+                                       GHC.Types.False -> go1 (GHC.Prim.+# x1 1) ys
+                                       GHC.Types.True
+                                       -> GHC.Types.[] @ (GHC.Types.Int, GHC.Types.Float) }) }
+                         } in
+                         letrec {
+                           $wgo1 :: GHC.Prim.Int# -> GHC.Prim.Int# -> GHC.Prim.Int#
+                             {- Arity: 2, Strictness: <L,U><L,U>, Inline: [0] -}
+                           = \ w2 :: GHC.Prim.Int# ww :: GHC.Prim.Int# ->
+                             case GHC.Prim.tagToEnum#
+                                    @ GHC.Types.Bool
+                                    (GHC.Prim.==# w2 y) of wild5 {
+                               GHC.Types.False -> $wgo1 (GHC.Prim.+# w2 1) (GHC.Prim.+# ww 1)
+                               GHC.Types.True -> GHC.Prim.+# ww 1 }
+                         } in
+                         case $wgo1 x 0 of ww { DEFAULT ->
+                         case GHC.Prim.tagToEnum#
+                                @ GHC.Types.Bool
+                                (GHC.Prim.<# 0 ww) of wild5 {
+                           GHC.Types.False
+                           -> GibbsSampler.$sfromList
+                                @ GHC.Types.Float
+                                (go1 x (GHC.Types.[] @ GHC.Types.Float))
+                           GHC.Types.True
+                           -> GibbsSampler.$sfromList
+                                @ GHC.Types.Float
+                                (go1 x (GibbsSampler.$wgo w1 ww)) } }
+                      GHC.Types.True -> GibbsSampler.randomInitializer1 } } } } } #)) -}
+ec7128c43ce2d51da5de316d70790f64
+  $wzerosInitializer ::
+    TNTypes.TNGraph
+    -> (# TNTypes.TNTable [TNTypes.TNVertex],
+          TNTypes.TNGraphType,
+          TNTypes.TVertexValueMap #)
+  {- Arity: 1, Strictness: <L,U(U(U(U),U(U),U,U),1*U,A)>,
+     Inline: [0],
+     Unfolding: (\ w :: TNTypes.TNGraph ->
+                 (# case w of wild { TNTypes.TNGraph ds ds1 ds2 -> ds },
+                    case w of wild { TNTypes.TNGraph ds ds1 ds2 -> ds1 },
+                    case w of wild { TNTypes.TNGraph ds1 ds2 ds3 ->
+                    case ds1 of wild1 { GHC.Arr.Array l u dt ds4 ->
+                    case l of wild2 { GHC.Types.I# x ->
+                    case u of wild3 { GHC.Types.I# y ->
+                    let {
+                      vs :: [TNTypes.TNVertex] = GHC.Enum.eftInt x y
+                    } in
+                    GibbsSampler.$sfromList
+                      @ GHC.Types.Float
+                      (GHC.List.zip
+                         @ GHC.Types.Int
+                         @ GHC.Types.Float
+                         vs
+                         (case GHC.List.$wlenAcc @ GHC.Types.Int vs 0 of ww2 { DEFAULT ->
+                          case GHC.Prim.tagToEnum#
+                                 @ GHC.Types.Bool
+                                 (GHC.Prim.># 1 ww2) of wild4 {
+                            GHC.Types.False
+                            -> letrec {
+                                 go1 :: GHC.Prim.Int# -> [GHC.Types.Float]
+                                   {- Arity: 1, Strictness: <L,U> -}
+                                 = \ x1 :: GHC.Prim.Int# ->
+                                   GHC.Types.:
+                                     @ GHC.Types.Float
+                                     GibbsSampler.zerosInitializer1
+                                     (case GHC.Prim.tagToEnum#
+                                             @ GHC.Types.Bool
+                                             (GHC.Prim.==# x1 ww2) of wild5 {
+                                        GHC.Types.False -> go1 (GHC.Prim.+# x1 1)
+                                        GHC.Types.True -> GHC.Types.[] @ GHC.Types.Float })
+                               } in
+                               go1 1
+                            GHC.Types.True
+                            -> GHC.Types.[] @ GHC.Types.Float } })) } } } } #)) -}
+fd4b402872bf0a01966d338ada647d62
+  type MarkovBlanket =
+    ([TNTypes.TNVertexValue], TNTypes.TNVertexValue)
+5f8b05b8071a013b8c6b44c01de966ad
+  getPosteriorSampling ::
+    TNTypes.TNGraph
+    -> TNTypes.TNGraph
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> System.Random.StdGen
+    -> TNTypes.TNGraph
+  {- Arity: 5,
+     Strictness: <L,U(U(U(U),U(U),U,U),U,U)><L,U(A,A,U)><S,1*U(U)><L,A><L,U>m,
+     Unfolding: InlineRule (5, True, False)
+                (\ xGraph :: TNTypes.TNGraph
+                   yGraph :: TNTypes.TNGraph
+                   numSamples :: GHC.Types.Int
+                   numBurns :: GHC.Types.Int
+                   randGen :: System.Random.StdGen ->
+                 GibbsSampler.getPosteriorSamplingRecursive
+                   xGraph
+                   yGraph
+                   numSamples
+                   numBurns
+                   GibbsSampler.getPosteriorSampling1
+                   (GibbsSampler.zerosInitializer xGraph)
+                   randGen) -}
+3c0667bc3f2bb2b2d327d4d5d431b61c
+  getPosteriorSampling1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0) -}
+59094face5009724a119da7e27be0d79
+  getPosteriorSamplingRecursive ::
+    TNTypes.TNGraph
+    -> TNTypes.TNGraph
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> TNTypes.TNGraph
+    -> System.Random.StdGen
+    -> TNTypes.TNGraph
+  {- Arity: 7,
+     Strictness: <L,U(U(U(U),U(U),A,U),A,U)><L,U(A,A,U)><S,1*U(U)><L,A><S,1*U(U)><L,U(U,U,U)><L,U>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (7, True, False)
+                (\ w :: TNTypes.TNGraph
+                   w1 :: TNTypes.TNGraph
+                   w2 :: GHC.Types.Int
+                   w3 :: GHC.Types.Int
+                   w4 :: GHC.Types.Int
+                   w5 :: TNTypes.TNGraph
+                   w6 :: System.Random.StdGen ->
+                 case w2 of ww { GHC.Types.I# ww1 ->
+                 case w4 of ww2 { GHC.Types.I# ww3 ->
+                 case GibbsSampler.$wgetPosteriorSamplingRecursive
+                        w
+                        w1
+                        ww1
+                        ww3
+                        w5
+                        w6 of ww4 { (#,,#) ww5 ww6 ww7 ->
+                 TNTypes.TNGraph ww5 ww6 ww7 } } }) -}
+a4f55f167cd68a5281adbdb5b49e811b
+  randomInitializer ::
+    TNTypes.TNGraph -> System.Random.StdGen -> TNTypes.TNGraph
+  {- Arity: 2, Strictness: <L,U(U(U(U),U(U),U,U),1*U,A)><L,U>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: TNTypes.TNGraph w1 :: System.Random.StdGen ->
+                 case GibbsSampler.$wrandomInitializer
+                        w
+                        w1 of ww { (#,,#) ww1 ww2 ww3 ->
+                 TNTypes.TNGraph ww1 ww2 ww3 }) -}
+ddfa1402335713b402e44f9102f4c5c9
+  randomInitializer1 ::
+    Data.Map.Base.Map TNTypes.TNVertex GHC.Types.Float
+  {- Unfolding: (GibbsSampler.$sfromList
+                   @ GHC.Types.Float
+                   (GHC.Types.[] @ (GHC.Types.Int, GHC.Types.Float))) -}
+38554689baab76bf8618cd14173d10b4
+  zerosInitializer :: TNTypes.TNGraph -> TNTypes.TNGraph
+  {- Arity: 1, Strictness: <L,U(U(U(U),U(U),U,U),1*U,A)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ w :: TNTypes.TNGraph ->
+                 case GibbsSampler.$wzerosInitializer
+                        w of ww { (#,,#) ww1 ww2 ww3 ->
+                 TNTypes.TNGraph ww1 ww2 ww3 }) -}
+06683bf36478de8c6984152acdbc2573
+  zerosInitializer1 :: GHC.Types.Float
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.F# __float 0.0) -}
+"SPEC/GibbsSampler fromList @ TNVertex _" [ALWAYS] forall @ a
+                                                          $dOrd :: GHC.Classes.Ord TNTypes.TNVertex
+  Data.Map.Base.fromList @ GHC.Types.Int @ a $dOrd
+  = GibbsSampler.$sfromList @ a
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

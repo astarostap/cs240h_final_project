@@ -1,0 +1,506 @@
+
+==================== FINAL INTERFACE ====================
+2016-03-10 11:39:43.187684 UTC
+
+interface snaph_Lgd3Rz2BLGaKkSAAd4VWq6:TNGraph 7103
+  interface hash: dffb2a1c36ed8f3fe066b2044d643fb2
+  ABI hash: b486a3673ceca70b3e0d8749943152af
+  export-list hash: 46ed0ff638d7eb91425b970c4d36eaa6
+  orphan hash: 6fe3e05d4de5a585ddc7bfa1e61b9ecf
+  flag hash: 4c0a7b65a6dddbc4161c2e2bfabe3dc3
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  TNGraph.addValuesToGraph
+  TNGraph.buildTNGraphFromInfo
+  TNGraph.convertGraph
+  TNGraph.divideGraphValuesBy
+  TNGraph.getGraphType
+  TNGraph.getNeighbors
+  TNGraph.getValue
+  TNGraph.insertValue
+  TNTypes.TNGraph
+module dependencies: TNPrimitiveFunctions TNTypes
+package dependencies: array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA*
+                      base-4.8.2.0* containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU*
+                      deepseq-1.4.1.1@deeps_6vMKxt5sPFR0XsbRWvvq59 ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Functor.Identity
+                         base-4.8.2.0:Data.Monoid base-4.8.2.0:Data.Type.Equality
+                         base-4.8.2.0:Data.Void base-4.8.2.0:GHC.Exts
+                         base-4.8.2.0:GHC.Generics
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Sequence
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Set.Base
+import  -/  array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA:Data.Array 6e22602c1cc5e362609f0924a7c0a209
+import  -/  base-4.8.2.0:Control.Exception e9090e246fba030faecf7b81b3e8e320
+import  -/  base-4.8.2.0:Data.Foldable 2ce969969ad5231eb40bd713f94f05ad
+import  -/  base-4.8.2.0:Data.List 3f0782c8d4bf50eecefcd5ea1798aac8
+import  -/  base-4.8.2.0:Data.Tuple 012ad951a59a9d85fe1de36a2f012986
+import  -/  base-4.8.2.0:GHC.Arr 70f35e6bfbc61995e045edb612354887
+import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.2.0:GHC.Num 9f42750c866f5832ca565146bd660c60
+import  -/  base-4.8.2.0:GHC.Real 1281efa9baf803bc7859d7efb89a38b3
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Graph e6c19c0862ef9a186b188295a6e5e748
+import  -/  containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map.Base 8b0bee2cbf19008d0429e93c882cbe4e
+import  -/  containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map.Strict 2e796f3ebd5f3ce783e00a01f5cdcaa8
+import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
+import  -/  TNPrimitiveFunctions 8abdbc5b612eceea9b04340efe135ea5
+  exports: 6b3e2516ed5644e76733dd25042b1eed
+  edges 0c7e5a83861238d9dc31ad42eafba0fb
+import  -/  TNTypes 25d68b9f8ad46f537656865954f7c3c6
+  exports: c002d1c7dd5f3c2abcd80cefb09b82b9
+  TGraphInfo 12f6b461189f936229f0ecb081ef0276
+  TNDGraph 844be5a3e9caac7894ca8a72f5556fda
+  TNGraph 4551fb9b00b46d134fa16a3f676f834b
+  TNGraph 426a917e7487723ae62048b9afba5a36
+  TNGraphType cd3fc179b5ea09be4b3383491abc2656
+  TNUGraph 248301ee9c167803caf73426386c5988
+  TNVertex cd35c0648eef8e31cf80b9584b0f3d18
+  TNVertexValue ead5c5b245bdf9918829aa655c5f67d7
+  TVertexValueMap 342884cd07fc946141bbf2a5cd18d412
+  graphType c66c34168388bb8e28f0a5818b341871
+  table 185ca38d2e5012009a11446ab58a83fa
+  vertexValues d10a63ce6aa0d82df5598dffdb258745
+2dfb6a0f3026e564182145e30fe7bae2
+  $sfilterGt1 ::
+    TNTypes.TNVertex
+    -> Data.Map.Base.Map TNTypes.TNVertex v
+    -> Data.Map.Base.Map TNTypes.TNVertex v
+  {- Arity: 2, Strictness: <L,1*U(U)><S,1*U> -}
+2e1ce2cbbe3da8e317740140ee500e2a
+  $sfilterLt1 ::
+    TNTypes.TNVertex
+    -> Data.Map.Base.Map TNTypes.TNVertex v
+    -> Data.Map.Base.Map TNTypes.TNVertex v
+  {- Arity: 2, Strictness: <L,1*U(U)><S,1*U> -}
+0cdf89d567e332fe9a80962879971175
+  $sfromList ::
+    [(TNTypes.TNVertex, a)] -> Data.Map.Base.Map TNTypes.TNVertex a
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ @ a ds :: [(TNTypes.TNVertex, a)] ->
+                 case ds of wild {
+                   [] -> Data.Map.Base.Tip @ TNTypes.TNVertex @ a
+                   : ds1 ds2
+                   -> case ds1 of wild1 { (,) kx x ->
+                      case ds2 of wild2 {
+                        []
+                        -> case x of x1 { DEFAULT ->
+                           case kx of dt { GHC.Types.I# ipv ->
+                           Data.Map.Base.Bin
+                             @ TNTypes.TNVertex
+                             @ a
+                             1
+                             dt
+                             x1
+                             (Data.Map.Base.Tip @ TNTypes.TNVertex @ a)
+                             (Data.Map.Base.Tip @ TNTypes.TNVertex @ a) } }
+                        : ipv ipv1
+                        -> case ipv of wild3 { (,) ky ds3 ->
+                           case kx of wild4 { GHC.Types.I# x1 ->
+                           case ky of wild5 { GHC.Types.I# y ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.>=# x1 y) of wild6 {
+                             GHC.Types.False
+                             -> case x of x0 { DEFAULT ->
+                                TNGraph.$wpoly_go4
+                                  @ a
+                                  1
+                                  (Data.Map.Base.Bin
+                                     @ TNTypes.TNVertex
+                                     @ a
+                                     1
+                                     wild4
+                                     x0
+                                     (Data.Map.Base.Tip @ TNTypes.TNVertex @ a)
+                                     (Data.Map.Base.Tip @ TNTypes.TNVertex @ a))
+                                  wild2 }
+                             GHC.Types.True
+                             -> case x of x0 { DEFAULT ->
+                                TNGraph.$sfromList1
+                                  @ a
+                                  (Data.Map.Base.Bin
+                                     @ TNTypes.TNVertex
+                                     @ a
+                                     1
+                                     wild4
+                                     x0
+                                     (Data.Map.Base.Tip @ TNTypes.TNVertex @ a)
+                                     (Data.Map.Base.Tip @ TNTypes.TNVertex @ a))
+                                  wild2 } } } } } } } }) -}
+6045fa5260650b0ce004f7bb667ff249
+  $sfromList1 ::
+    Data.Map.Base.Map TNTypes.TNVertex a1
+    -> [(TNTypes.TNVertex, a1)]
+    -> Data.Map.Base.Map TNTypes.TNVertex a1
+  {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+9bad7a776d52c10e39e97c2288724a9e
+  $sinsert_$sgo4 ::
+    TNTypes.TNVertex
+    -> a1
+    -> Data.Map.Base.Map TNTypes.TNVertex a1
+    -> Data.Map.Base.Map TNTypes.TNVertex a1
+  {- Arity: 3, Strictness: <S,1*U(U)><S,1*U><S,1*U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a1
+                   w :: TNTypes.TNVertex
+                   w1 :: a1
+                   w2 :: Data.Map.Base.Map TNTypes.TNVertex a1 ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 TNGraph.$w$sgo4 @ a1 ww1 w1 w2 }) -}
+1f4fd69005298b6c5e1a74550d0d479b
+  $slookup1 ::
+    TNTypes.TNVertex
+    -> Data.Map.Base.Map TNTypes.TNVertex a -> GHC.Base.Maybe a
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U(U)><S,1*U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   w :: TNTypes.TNVertex
+                   w1 :: Data.Map.Base.Map TNTypes.TNVertex a ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 TNGraph.$wpoly_go10 @ a ww1 w1 }) -}
+11a4a9fc7b03995ddf1b3d277499f497
+  $strim1 ::
+    TNTypes.TNVertex
+    -> TNTypes.TNVertex
+    -> Data.Map.Base.Map TNTypes.TNVertex a
+    -> Data.Map.Base.Map TNTypes.TNVertex a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*U(U)><L,1*U(U)><S,1*U> -}
+8ccc29775e0bbb5eb365e873f5f5ccaa
+  $strim3 ::
+    TNTypes.TNVertex
+    -> Data.Map.Base.Map TNTypes.TNVertex a
+    -> Data.Map.Base.Map TNTypes.TNVertex a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U(U)><S,1*U> -}
+7a9753c17e0cceebcb3e4e7bb63aebda
+  $sunionWith_$sunionWithKey ::
+    (TNTypes.TNVertex -> a -> a -> a)
+    -> Data.Map.Base.Map TNTypes.TNVertex a
+    -> Data.Map.Base.Map TNTypes.TNVertex a
+    -> Data.Map.Base.Map TNTypes.TNVertex a
+  {- Arity: 3, Strictness: <L,C(C1(C1(U)))><S,1*U><S,1*U> -}
+0933ca86258a3e0b3a7990ffa8137712
+  $w$sgo4 ::
+    GHC.Prim.Int#
+    -> a1
+    -> Data.Map.Base.Map TNTypes.TNVertex a1
+    -> Data.Map.Base.Map TNTypes.TNVertex a1
+  {- Arity: 3, Strictness: <L,U><S,1*U><S,1*U>, Inline: [0] -}
+03c8ca551af7fc93d4b1796f0e576768
+  $w$sgreater ::
+    TNTypes.TNVertex
+    -> Data.Map.Base.Map TNTypes.TNVertex a1
+    -> (# GHC.Base.Maybe a1, Data.Map.Base.Map TNTypes.TNVertex a1 #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U(U)><S,1*U>,
+     Inline: [0] -}
+cae45974aff3e5833c5d039ba7adf299
+  $w$smiddle ::
+    TNTypes.TNVertex
+    -> TNTypes.TNVertex
+    -> Data.Map.Base.Map TNTypes.TNVertex a1
+    -> (# GHC.Base.Maybe a1, Data.Map.Base.Map TNTypes.TNVertex a1 #)
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,1*U(U)><L,1*U(U)><S,1*U>,
+     Inline: [0] -}
+6112c72ed8b12882b4abbe8e49c2338d
+  $wbuildTNGraphFromInfo ::
+    TNTypes.TNGraphType
+    -> TNTypes.TGraphInfo
+    -> (# TNTypes.TNTable [TNTypes.TNVertex],
+          TNTypes.TNGraphType,
+          TNTypes.TVertexValueMap #)
+  {- Arity: 2, Strictness: <L,U><L,U(1*U,1*U)>, Inline: [0],
+     Unfolding: (\ w :: TNTypes.TNGraphType w1 :: TNTypes.TGraphInfo ->
+                 (# case w1 of wild { (,) x ds1 ->
+                    let {
+                      flatEdges :: [Data.Graph.Vertex]
+                      = TNGraph.buildTNGraphFromInfo_go x
+                    } in
+                    case GHC.List.$wlenAcc @ GHC.Types.Int flatEdges 0 of ww2 {
+                      DEFAULT
+                      -> case GHC.List.strictMinimum
+                                @ GHC.Types.Int
+                                GHC.Classes.$fOrdInt
+                                flatEdges of ww3 { GHC.Types.I# ww4 ->
+                         case GHC.List.strictMaximum
+                                @ GHC.Types.Int
+                                GHC.Classes.$fOrdInt
+                                flatEdges of ww5 { GHC.Types.I# ww6 ->
+                         Data.Graph.$wbuildG ww4 ww6 x } }
+                      0 -> Data.Graph.$wbuildG 0 0 x } },
+                    w,
+                    Data.Tuple.snd
+                      @ [TNTypes.TNEdge]
+                      @ TNTypes.TVertexValueMap
+                      w1 #)) -}
+bb19e1a82d6fa37ac173e275046a14c0
+  $wconvertGraph ::
+    TNTypes.TNTable [TNTypes.TNVertex]
+    -> TNTypes.TNGraphType
+    -> TNTypes.TVertexValueMap
+    -> TNTypes.TNGraphType
+    -> (# TNTypes.TNTable [TNTypes.TNVertex],
+          TNTypes.TNGraphType,
+          TNTypes.TVertexValueMap #)
+  {- Arity: 4,
+     Strictness: <L,1*U(U(U),U(U),A,U)><S,1*U><L,1*U><S,1*U>,
+     Inline: [0],
+     Unfolding: (\ ww :: TNTypes.TNTable [TNTypes.TNVertex]
+                   ww1 :: TNTypes.TNGraphType
+                   ww2 :: TNTypes.TVertexValueMap
+                   w :: TNTypes.TNGraphType ->
+                 case ww1 of wild {
+                   TNTypes.TNUGraph
+                   -> case TNGraph.convertGraph1
+                      ret_ty (# TNTypes.TNTable [TNTypes.TNVertex],
+                                TNTypes.TNGraphType,
+                                TNTypes.TVertexValueMap #)
+                      of {}
+                   TNTypes.TNDGraph
+                   -> case w of wild1 {
+                        TNTypes.TNUGraph
+                        -> TNGraph.$wbuildTNGraphFromInfo
+                             TNTypes.TNUGraph
+                             (TNGraph.convertGraph_go (Data.Graph.edges ww), ww2)
+                        TNTypes.TNDGraph
+                        -> case TNGraph.convertGraph1
+                           ret_ty (# TNTypes.TNTable [TNTypes.TNVertex],
+                                     TNTypes.TNGraphType,
+                                     TNTypes.TVertexValueMap #)
+                           of {} } }) -}
+3767571352864db4f1526e8d26d05c93
+  $wdivideGraphValuesBy ::
+    TNTypes.TNGraph
+    -> GHC.Types.Float
+    -> (# TNTypes.TNTable [TNTypes.TNVertex],
+          TNTypes.TNGraphType,
+          TNTypes.TVertexValueMap #)
+  {- Arity: 2, Strictness: <L,U(1*U,1*U,1*U)><L,1*U(U)>, Inline: [0],
+     Unfolding: (\ w :: TNTypes.TNGraph w1 :: GHC.Types.Float ->
+                 (# case w of wild { TNTypes.TNGraph ds ds1 ds2 -> ds },
+                    case w of wild { TNTypes.TNGraph ds ds1 ds2 -> ds1 },
+                    case w1 of wild { GHC.Types.F# x ->
+                    case GHC.Prim.tagToEnum#
+                           @ GHC.Types.Bool
+                           (GHC.Prim.eqFloat# x __float 0.0) of wild1 {
+                      GHC.Types.False
+                      -> case w of wild2 { TNTypes.TNGraph ds ds1 ds2 ->
+                         letrec {
+                           go10 :: [(TNTypes.TNVertex, TNTypes.TNVertexValue)]
+                                   -> Data.Map.Base.Map GHC.Types.Int GHC.Types.Float
+                                   -> [(TNTypes.TNVertex, TNTypes.TNVertexValue)]
+                             {- Arity: 2, Strictness: <L,1*U><S,1*U> -}
+                           = \ z' :: [(TNTypes.TNVertex, TNTypes.TNVertexValue)]
+                               ds3 :: Data.Map.Base.Map GHC.Types.Int GHC.Types.Float ->
+                             case ds3 of wild3 {
+                               Data.Map.Base.Bin dt kx x1 l r
+                               -> go10
+                                    (GHC.Types.:
+                                       @ (TNTypes.TNVertex, TNTypes.TNVertexValue)
+                                       (kx,
+                                        case x1 of wild4 { GHC.Types.F# x2 ->
+                                        case GHC.Prim.divideFloat# x2 x of wild5 { DEFAULT ->
+                                        GHC.Types.F# wild5 } })
+                                       (go10 z' r))
+                                    l
+                               Data.Map.Base.Tip -> z' }
+                         } in
+                         TNGraph.$sfromList
+                           @ GHC.Types.Float
+                           (go10
+                              (GHC.Types.[] @ (TNTypes.TNVertex, TNTypes.TNVertexValue))
+                              ds2) }
+                      GHC.Types.True
+                      -> case w of wild2 { TNTypes.TNGraph ds ds1 ds2 ->
+                         TNGraph.$sfromList
+                           @ GHC.Types.Float
+                           (Data.Map.Base.$fEqMap1
+                              @ GHC.Types.Int
+                              @ GHC.Types.Float
+                              (GHC.Types.[] @ (GHC.Types.Int, GHC.Types.Float))
+                              ds2) } } } #)) -}
+ef2a316cd128049e1dc46be87f4de5af
+  $wgetNeighbors ::
+    GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Array# [TNTypes.TNVertex]
+    -> GHC.Prim.Int#
+    -> [TNTypes.TNVertex]
+  {- Arity: 4, Strictness: <L,U><L,U><L,U><L,U>, Inline: [0],
+     Unfolding: (\ ww :: GHC.Prim.Int#
+                   ww1 :: GHC.Prim.Int#
+                   ww2 :: GHC.Prim.Array# [TNTypes.TNVertex]
+                   ww3 :: GHC.Prim.Int# ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww3 ww) of wild {
+                   GHC.Types.False -> GHC.Types.[] @ TNTypes.TNVertex
+                   GHC.Types.True
+                   -> case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.<=# ww3 ww1) of wild1 {
+                        GHC.Types.False -> GHC.Types.[] @ TNTypes.TNVertex
+                        GHC.Types.True
+                        -> case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.<=# ww ww3) of wild2 {
+                             GHC.Types.False
+                             -> case TNGraph.getNeighbors1 ww ww1 ww3
+                                ret_ty [TNTypes.TNVertex]
+                                of {}
+                             GHC.Types.True
+                             -> case GHC.Prim.indexArray#
+                                       @ [TNTypes.TNVertex]
+                                       ww2
+                                       (GHC.Prim.-# ww3 ww) of ds4 { (##) ipv ->
+                                ipv } } } }) -}
+ab2e0033f18e72525a4c2ae7a3115244
+  $wpoly_go10 ::
+    GHC.Prim.Int#
+    -> Data.Map.Base.Map TNTypes.TNVertex a -> GHC.Base.Maybe a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*U>, Inline: [0] -}
+b2bd9c413eb5a36477e8c276d7a33d43
+  $wpoly_go4 ::
+    GHC.Prim.Int#
+    -> Data.Map.Base.Map TNTypes.TNVertex a
+    -> [(TNTypes.TNVertex, a)]
+    -> Data.Map.Base.Map TNTypes.TNVertex a
+  {- Arity: 3, Strictness: <L,U><S,1*U><S,1*U>, Inline: [0] -}
+95f5187dd42c41f1bcb970f133721943
+  addValuesToGraph ::
+    TNTypes.TNGraph -> TNTypes.TVertexValueMap -> TNTypes.TNGraph
+  {- Arity: 2, Strictness: <L,U(1*U,1*U,1*U)><L,1*U>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: TNTypes.TNGraph w1 :: TNTypes.TVertexValueMap ->
+                 TNTypes.TNGraph
+                   (case w of wild { TNTypes.TNGraph ds ds1 ds2 -> ds })
+                   (case w of wild { TNTypes.TNGraph ds ds1 ds2 -> ds1 })
+                   (case w of wild { TNTypes.TNGraph ds ds1 ds2 ->
+                    TNGraph.$sunionWith_$sunionWithKey
+                      @ GHC.Types.Float
+                      (\ ds3 :: TNTypes.TNVertex
+                         x :: TNTypes.TNVertexValue[OneShot]
+                         y :: TNTypes.TNVertexValue[OneShot] ->
+                       GHC.Float.plusFloat x y)
+                      ds2
+                      w1 })) -}
+bc3e71ddff8c43b4efba2ac63df2c364
+  buildTNGraphFromInfo ::
+    TNTypes.TNGraphType -> TNTypes.TGraphInfo -> TNTypes.TNGraph
+  {- Arity: 2, Strictness: <L,U><L,U(1*U,1*U)>m, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: TNTypes.TNGraphType w1 :: TNTypes.TGraphInfo ->
+                 case TNGraph.$wbuildTNGraphFromInfo
+                        w
+                        w1 of ww { (#,,#) ww1 ww2 ww3 ->
+                 TNTypes.TNGraph ww1 ww2 ww3 }) -}
+4114ad89d49e49504236ad2fb1c91149
+  buildTNGraphFromInfo_go ::
+    [(Data.Graph.Vertex, Data.Graph.Vertex)] -> [Data.Graph.Vertex]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+5182430bb1815a681f8f4f6ed1b4e5ec
+  convertGraph ::
+    TNTypes.TNGraph -> TNTypes.TNGraphType -> TNTypes.TNGraph
+  {- Arity: 2,
+     Strictness: <S(LSL),1*U(1*U(U(U),U(U),A,U),1*U,1*U)><S,1*U>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: TNTypes.TNGraph w1 :: TNTypes.TNGraphType ->
+                 case w of ww { TNTypes.TNGraph ww1 ww2 ww3 ->
+                 case TNGraph.$wconvertGraph
+                        ww1
+                        ww2
+                        ww3
+                        w1 of ww4 { (#,,#) ww5 ww6 ww7 ->
+                 TNTypes.TNGraph ww5 ww6 ww7 } }) -}
+712b9d5d2b9eaed6b8cb1e69cf855ecb
+  convertGraph1 :: TNTypes.TNGraph
+  {- Strictness: b -}
+f404304950df26eb33f57bd31b0c461d
+  convertGraph_go ::
+    [(Data.Graph.Vertex, Data.Graph.Vertex)]
+    -> [(Data.Graph.Vertex, Data.Graph.Vertex)]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+0f6b0e3a8f32c74121c218f4b332179d
+  divideGraphValuesBy ::
+    TNTypes.TNGraph -> GHC.Types.Float -> TNTypes.TNGraph
+  {- Arity: 2, Strictness: <L,U(1*U,1*U,1*U)><L,1*U(U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: TNTypes.TNGraph w1 :: GHC.Types.Float ->
+                 case TNGraph.$wdivideGraphValuesBy
+                        w
+                        w1 of ww { (#,,#) ww1 ww2 ww3 ->
+                 TNTypes.TNGraph ww1 ww2 ww3 }) -}
+58a6cac2ee9a29f372c18197d5b370f9
+  getGraphType :: TNTypes.TNGraph -> TNTypes.TNGraphType
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSL),1*U(A,1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: TNTypes.TNGraph ->
+                 case ds of wild { TNTypes.TNGraph ds1 ds2 ds3 -> ds2 }) -}
+eddb75f0ce84bebe673cae3b26fdabf5
+  getNeighbors ::
+    TNTypes.TNGraph -> TNTypes.TNVertex -> [TNTypes.TNVertex]
+  {- Arity: 2,
+     Strictness: <S(S(SSLL)LL),1*U(1*U(U(U),U(U),A,U),A,A)><S,1*U(U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: TNTypes.TNGraph w1 :: TNTypes.TNVertex ->
+                 case w of ww { TNTypes.TNGraph ww1 ww2 ww3 ->
+                 case ww1 of ww4 { GHC.Arr.Array ww5 ww6 ww7 ww8 ->
+                 case ww5 of ww9 { GHC.Types.I# ww10 ->
+                 case ww6 of ww11 { GHC.Types.I# ww12 ->
+                 case w1 of ww13 { GHC.Types.I# ww14 ->
+                 TNGraph.$wgetNeighbors ww10 ww12 ww8 ww14 } } } } }) -}
+3225d5b49d022769889ce07cc578d485
+  getNeighbors1 ::
+    GHC.Prim.Int# -> GHC.Prim.Int# -> GHC.Prim.Int# -> GHC.Types.Int
+  {- Arity: 3, Strictness: <L,U><L,U><L,U>b -}
+d0c4046f6e323324cb31627c4c45e99a
+  getValue ::
+    TNTypes.TNGraph
+    -> TNTypes.TNVertex -> GHC.Base.Maybe TNTypes.TNVertexValue
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LLS),1*U(A,A,1*U)><S,1*U(U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ ds :: TNTypes.TNGraph vId :: TNTypes.TNVertex ->
+                 case ds of wild { TNTypes.TNGraph ds1 ds2 ds3 ->
+                 TNGraph.$slookup1 @ GHC.Types.Float vId ds3 }) -}
+e874d9a39a18189ec8de9dc0293cd782
+  insertValue ::
+    TNTypes.TNGraph
+    -> TNTypes.TNVertex -> TNTypes.TNVertexValue -> TNTypes.TNGraph
+  {- Arity: 3, Strictness: <S,1*U(U,U,1*U)><L,1*U(U)><L,1*U>m,
+     Unfolding: InlineRule (3, True, False)
+                (\ ds :: TNTypes.TNGraph
+                   vId :: TNTypes.TNVertex
+                   newVal :: TNTypes.TNVertexValue ->
+                 case ds of wild { TNTypes.TNGraph ds1 ds2 ds3 ->
+                 TNTypes.TNGraph
+                   ds1
+                   ds2
+                   (TNGraph.$sinsert_$sgo4 @ GHC.Types.Float vId newVal ds3) }) -}
+"SPEC/TNGraph fromList @ TNVertex _" [ALWAYS] forall @ a
+                                                     $dOrd :: GHC.Classes.Ord TNTypes.TNVertex
+  Data.Map.Strict.fromList @ GHC.Types.Int @ a $dOrd
+  = TNGraph.$sfromList @ a
+"SPEC/TNGraph unionWithKey @ TNVertex _" [ALWAYS] forall @ a
+                                                         $dOrd :: GHC.Classes.Ord TNTypes.TNVertex
+  Data.Map.Strict.unionWithKey @ GHC.Types.Int @ a $dOrd
+  = TNGraph.$sunionWith_$sunionWithKey @ a
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
