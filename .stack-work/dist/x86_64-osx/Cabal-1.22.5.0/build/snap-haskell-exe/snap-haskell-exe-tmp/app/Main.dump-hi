@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2016-03-10 11:59:29.358446 UTC
+2016-03-15 21:45:40.557617 UTC
 
 interface main@main:Main 7103
-  interface hash: ced2eb7d4a7aa6226fdec049c37e80ca
-  ABI hash: b4917a26fe8f47ad9e28877827fffde0
+  interface hash: 258eb82e303bffab19762e2425865600
+  ABI hash: 7bb0138f44035f1f688431c98bbed502
   export-list hash: 2e56a88320c8dde384074fde56f43f20
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: d38da38859f20cf730acb33a7d515d5b
@@ -60,6 +60,7 @@ import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
 import  -/  base-4.8.2.0:System.Environment ba6e36000c8274703cf7786fbe8d0f6c
 import  -/  base-4.8.2.0:System.Exit f5581af4ad998e898da01fdc74c2769b
 import  -/  base-4.8.2.0:System.IO 0899686bfc1d9ef72dff3de85e99862a
+import  -/  base-4.8.2.0:Text.Read ef0ef92fb7358ae94bab089940adfd2a
 import  -/  containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map bf7758bd12b23a367777a33fd16e39de
 import  -/  containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map.Base 8b0bee2cbf19008d0429e93c882cbe4e
 import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
@@ -67,7 +68,7 @@ import  -/  snap-haskell-0.1.0.0@snaph_Lgd3Rz2BLGaKkSAAd4VWq6:GibbsSampler dc6a2
 import  -/  snap-haskell-0.1.0.0@snaph_Lgd3Rz2BLGaKkSAAd4VWq6:TNGraph b486a3673ceca70b3e0d8749943152af
 import  -/  snap-haskell-0.1.0.0@snaph_Lgd3Rz2BLGaKkSAAd4VWq6:TNParser d32b33e0a883319e2070133c1d995ec4
 import  -/  snap-haskell-0.1.0.0@snaph_Lgd3Rz2BLGaKkSAAd4VWq6:TNTypes 25d68b9f8ad46f537656865954f7c3c6
-47a46356669cf8851840d511c490a0dc
+7ebe4f4a473868d40e6e31cb6fd818fe
   $wa ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -75,15 +76,15 @@ import  -/  snap-haskell-0.1.0.0@snaph_Lgd3Rz2BLGaKkSAAd4VWq6:TNTypes 25d68b9f8a
      Unfolding: (\ w :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
                  GHC.IO.Handle.Text.hPutStr2
                    GHC.IO.Handle.FD.stdout
-                   Main.main5
+                   Main.main7
                    GHC.Types.True
                    w) -}
-be9d347af4443802443e1e766d1da292
+f20aca72ee227a55fd8b84b17aa642c6
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <L,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
-fab6f0eb4e36549176c50678ac2b8f88
+de48485d23901359c4b398490078b321
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -101,7 +102,7 @@ fab6f0eb4e36549176c50678ac2b8f88
                  case ipv1 of wild1 {
                    [] -> Main.$wa ipv2
                    : ds ds3
-                   -> case GHC.Base.eqString ds Main.main4 of wild2 {
+                   -> case GHC.Base.eqString ds Main.main6 of wild2 {
                         GHC.Types.False -> Main.$wa ipv2
                         GHC.Types.True
                         -> case ds3 of wild3 {
@@ -111,13 +112,39 @@ fab6f0eb4e36549176c50678ac2b8f88
                                   [] -> Main.$wa ipv2
                                   : int ds5
                                   -> case ds5 of wild5 {
-                                       [] -> Main.main3 string Main.main2 ipv3 ipv2
+                                       []
+                                       -> Main.main5
+                                            string
+                                            (case Text.Read.readEither6
+                                                    @ GHC.Types.Int
+                                                    (Text.ParserCombinators.ReadP.run
+                                                       @ GHC.Types.Int
+                                                       Main.main4
+                                                       int) of wild6 {
+                                               [] -> Main.main3
+                                               : x ds6
+                                               -> case ds6 of wild7 {
+                                                    [] -> x : ipv4 ipv5 -> Main.main2 } })
+                                            ipv3
+                                            ipv2
                                        : ipv4 ipv5 -> Main.$wa ipv2 } } } } } } } }) -}
-8313fd8ca24f2cfc5d19e90330e91ca2
+cad3727454606f0e4c3374aa97e72065
   main2 :: GHC.Types.Int
-  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 10) -}
-8763a094a17e96ab015219cd815877b6
-  main3 ::
+  {- Strictness: b -}
+61c1074643d047865a5a570ee42f0914
+  main3 :: GHC.Types.Int
+  {- Strictness: b -}
+fccda27be05b9b8e652267efcd2bbfe4
+  main4 :: Text.ParserCombinators.ReadP.P GHC.Types.Int
+  {- Unfolding: ((GHC.Read.$fReadInt3
+                    GHC.Read.$fReadInt_$sconvertInt
+                    Text.ParserCombinators.ReadPrec.minPrec)
+                   `cast`
+                 (Text.ParserCombinators.ReadP.NTCo:ReadP[0] <GHC.Types.Int>_R)
+                   @ GHC.Types.Int
+                   (Text.Read.readEither5 @ GHC.Types.Int)) -}
+9faac993912593d1e3cd45bc96e0a9a6
+  main5 ::
     GHC.IO.FilePath
     -> GHC.Types.Int
     -> System.Random.StdGen
@@ -166,15 +193,15 @@ fab6f0eb4e36549176c50678ac2b8f88
                          Main.main_go10 (GHC.Types.[] @ GHC.Types.Char) ww7 } })
                         GHC.Types.True
                         ipv2 } } }) -}
-c312ef6140ccefa242de947489d6e4af
-  main4 :: [GHC.Types.Char]
+146dd35671e1b44fdb6ce5d85297ecf5
+  main6 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "gibbs"#) -}
-ba896e09f98df4ac5d4cfcd3f62202ba
-  main5 :: [GHC.Types.Char]
+df58d617f2348b3da3da68c8d9d9f245
+  main7 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "Usage: snap-haskell-exe gibbs <input-file> <num-samples>"#) -}
-883b4232165ff1ee59da5a0b752dd541
-  main6 ::
+bf80d9debb777446f4faed2e11d60836
+  main8 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 1,
@@ -187,13 +214,13 @@ ba896e09f98df4ac5d4cfcd3f62202ba
     -> Data.Map.Base.Map GHC.Types.Int GHC.Types.Float
     -> [GHC.Types.Char]
   {- Arity: 2, Strictness: <L,1*U><S,1*U> -}
-c4355d2991785ddfdb68a101218473a2
+d0868e7421ec09255f576b2932937553
   performGibbsSampling ::
     GHC.IO.FilePath
     -> GHC.Types.Int -> System.Random.StdGen -> GHC.Types.IO ()
   {- Arity: 4, Strictness: <L,U><L,1*U(U)><L,U><L,U>,
      Unfolding: InlineRule (0, True, True)
-                Main.main3
+                Main.main5
                   `cast`
                 (<GHC.IO.FilePath>_R
                  ->_R <GHC.Types.Int>_R

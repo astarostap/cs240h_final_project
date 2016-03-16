@@ -38,7 +38,8 @@ markovBlanket vId yGraph xGraph = (yNeighborVals, fromJust $ xNeighborVal)
 
 -- |Return Y, initialized randomly
 randomInitializer:: TNGraph -> StdGen -> TNGraph
-randomInitializer xGraph randGen = TNGraph { table = t , graphType = gt, vertexValues = M.fromList newVals}
+randomInitializer xGraph randGen = 
+	TNGraph { table = t , graphType = gt, vertexValues = M.fromList newVals}
 	where
 		(TNGraph {table = t, graphType = gt, vertexValues = values}) = xGraph
 		randVals = take (length $ vertices xGraph) (randoms (randGen) :: [Float])
@@ -46,7 +47,8 @@ randomInitializer xGraph randGen = TNGraph { table = t , graphType = gt, vertexV
 
 -- |Return Y, a copy of X with all values initialized to zeros
 zerosInitializer:: TNGraph -> TNGraph
-zerosInitializer graph = TNGraph { table = t , graphType = gt, vertexValues = M.fromList newVals}
+zerosInitializer graph = 
+	TNGraph { table = t , graphType = gt, vertexValues = M.fromList newVals}
 	where
 		(TNGraph {table = t, graphType = gt, vertexValues = values}) = graph
 		vs = vertices graph
@@ -70,7 +72,8 @@ sampleProb blanket = 1 / denominator
 -- It first estimates the probablity that the vertex is black using sample_prob, 
 -- and checks if a randomly drawn decimal (0,1) falls within that probability.
 sample:: TNVertex -> TNGraph -> TNGraph -> StdGen -> (TNVertexValue, StdGen)
-sample vId yGraph xGraph randGen = if (randNum < prob) then (1,newRandGen)  else (-1, newRandGen)
+sample vId yGraph xGraph randGen = 
+	if (randNum < prob) then (1,newRandGen)  else (-1, newRandGen)
 	where
 		(yNeighbors, xNeighbor) = markovBlanket vId yGraph xGraph
 		prob = sampleProb (markovBlanket vId yGraph xGraph)
@@ -90,7 +93,8 @@ gatherSamples yGraph xGraph randGen vsLeft currResult =
 
 -- |Returns a Gibbs sample, given Y and X.
 gibbsSample:: TNGraph -> TNGraph -> StdGen -> TNGraph
-gibbsSample yGraph xGraph randGen = TNGraph {table = t, graphType = gt, vertexValues = sampleVertexVals}
+gibbsSample yGraph xGraph randGen = 
+	TNGraph {table = t, graphType = gt, vertexValues = sampleVertexVals}
 	where
 		newSampleVals = gatherSamples yGraph xGraph randGen (vertices yGraph) []
 		TNGraph {table = t, graphType = gt, vertexValues = newVals} = yGraph
@@ -98,7 +102,8 @@ gibbsSample yGraph xGraph randGen = TNGraph {table = t, graphType = gt, vertexVa
 
 -- |Adds a value to a graph's vertices
 addOnesFromSample:: TNGraph -> TVertexValueMap -> TNGraph
-addOnesFromSample prevCountsGraph newValues = addValuesToGraph prevCountsGraph ones
+addOnesFromSample prevCountsGraph newValues = 
+	addValuesToGraph prevCountsGraph ones
 	where ones = M.map (\x -> if (x == 1) then 1 else 0) newValues
 
 -- |Get posterior probability for all vertices in Y
@@ -141,33 +146,3 @@ vertexIdToCoordinates vId graphShape =
 				numLinesBefore = div vId numVerticesPerLine
 				numVerticesBefore = numLinesBefore * numVerticesPerLine
 				colNum = vId - numVerticesBefore
-
-doShitWithGraph:: TNGraph -> StdGen -> TNGraph
-doShitWithGraph xGraph randGen = do
---	let yGraph = zerosInitializer xGraph
-	getPosteriorSampling xGraph (zerosInitializer xGraph) 1 0 randGen
-
-test = readEdgesFile "../examples/whole_z.txt"
-
-printStuff xGraph = do
-	putStrLn (show $ "*****************************")
-	randGen <- getStdGen
-	let yGraph = randomInitializer xGraph randGen 
-	let (TNGraph {table = t1, graphType = gt1, vertexValues = values}) = doShitWithGraph (convertGraph xGraph TNUGraph) randGen
-	let vals = map (\x -> (show $ fst x) ++ "\t" ++ (show $ snd x) ++ "\n") (M.toList values)
-	--print $ concat vals
-	--let (TNGraph {table = t1, graphType = gt1, vertexValues = values1}) = posterior
-	writeFile "myfile" $ (concat vals)
-	
-
-readEdgesFile :: FilePath -> IO()
-readEdgesFile file = readFile file >>= check . parseTNGraphEdgesFile
-  where check (Right graph) = printStuff graph 
-        check (Left msg) = fail $ file ++ ": " ++ msg
-
-graph = buildTNGraphFromInfo TNDGraph ([(1, 2), (1, 3), (2, 4), (5, 7), (1,2),(1,2)], M.fromList [(1,1),(2,0.45),(3,1),(4,0.45),(5,0.45),(6,0.45),(7,0.45)])
-
-
-
-
-

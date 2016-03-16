@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2016-03-10 12:01:41.091075 UTC
+2016-03-16 20:38:29.349626 UTC
 
 interface snaph_Lgd3Rz2BLGaKkSAAd4VWq6:GibbsSampler 7103
-  interface hash: c7a4ce648053265022842c5954aaa3b6
+  interface hash: 1d655d5e441b3ca8bc0fcedd4eda0d17
   ABI hash: dc6a29b68b7e9217a815a954f4178259
   export-list hash: 4313e43c922a9cdd34f9ff53f00581ca
   orphan hash: e62b3408292d50d1b495695424792466
@@ -50,44 +50,34 @@ family instance modules: base-4.8.2.0:Control.Applicative
                          text-1.2.2.0@text_5c7VCmRXJenGcMPs3kwpkI:Data.Text
                          text-1.2.2.0@text_5c7VCmRXJenGcMPs3kwpkI:Data.Text.Lazy
 import  -/  random-1.1@IQxsFMAJSrCF7cHNxD7bSI:System.Random f846d7495aa22d6383669937e7654c9b
-import  -/  base-4.8.2.0:Data.Either e8724afd65fd432cfe9a54014f5f762d
 import  -/  base-4.8.2.0:Data.Foldable 2ce969969ad5231eb40bd713f94f05ad
 import  -/  base-4.8.2.0:Data.Maybe 1cb58de2b04ee3c0c0a7dc9201184aff
 import  -/  base-4.8.2.0:Data.Tuple 012ad951a59a9d85fe1de36a2f012986
 import  -/  base-4.8.2.0:Debug.Trace 6660afb6094d69397ea084364da8f950
 import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
 import  -/  base-4.8.2.0:GHC.Float e532d434ec2447d809887c0fca1d78a5
-import  -/  base-4.8.2.0:GHC.IO bb5b81adcea33b14bd4abe16d7dde45f
 import  -/  base-4.8.2.0:GHC.List 0c736920522bbd14b770342776012ab6
 import  -/  base-4.8.2.0:GHC.Num 9f42750c866f5832ca565146bd660c60
 import  -/  base-4.8.2.0:GHC.Real 1281efa9baf803bc7859d7efb89a38b3
-import  -/  base-4.8.2.0:GHC.Show 0e1d8380a8fb0cfb07ebeda3b70cbf38
 import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
-import  -/  base-4.8.2.0:System.IO 0899686bfc1d9ef72dff3de85e99862a
 import  -/  containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map bf7758bd12b23a367777a33fd16e39de
 import  -/  containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map.Base 8b0bee2cbf19008d0429e93c882cbe4e
 import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
-import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
 import  -/  TNGraph b486a3673ceca70b3e0d8749943152af
   exports: 46ed0ff638d7eb91425b970c4d36eaa6
   addValuesToGraph 95f5187dd42c41f1bcb970f133721943
-  buildTNGraphFromInfo bc3e71ddff8c43b4efba2ac63df2c364
-  convertGraph 5182430bb1815a681f8f4f6ed1b4e5ec
   divideGraphValuesBy 0f6b0e3a8f32c74121c218f4b332179d
   getNeighbors eddb75f0ce84bebe673cae3b26fdabf5
   getValue d0c4046f6e323324cb31627c4c45e99a
 import  -/  TNParser d32b33e0a883319e2070133c1d995ec4
   exports: aea19c923056e1cacdef671ab6db5174
-  parseTNGraphEdgesFile efb507ace7bede1afd4e6027a6521036
 import  -/  TNPrimitiveFunctions 8abdbc5b612eceea9b04340efe135ea5
   exports: 6b3e2516ed5644e76733dd25042b1eed
   vertices 6b5636a0df092db0a2190da28e886d56
 import  -/  TNTypes 25d68b9f8ad46f537656865954f7c3c6
   exports: c002d1c7dd5f3c2abcd80cefb09b82b9
-  TNDGraph 844be5a3e9caac7894ca8a72f5556fda
   TNGraph 4551fb9b00b46d134fa16a3f676f834b
   TNGraph 426a917e7487723ae62048b9afba5a36
-  TNUGraph 248301ee9c167803caf73426386c5988
   TNVertex cd35c0648eef8e31cf80b9584b0f3d18
   TNVertexValue ead5c5b245bdf9918829aa655c5f67d7
   TVertexValueMap 342884cd07fc946141bbf2a5cd18d412

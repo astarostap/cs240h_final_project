@@ -16,7 +16,7 @@ main = do
     args <- getArgs
     randGen <- getStdGen
     case args of
-    	["gibbs", string, int] -> performGibbsSampling string 10 randGen
+    	["gibbs", string, int] -> performGibbsSampling string (read int :: Int) randGen
     	_ -> putStrLn "Usage: snap-haskell-exe gibbs <input-file> <num-samples>"	
 
 -- |Reads a file and performs Gibbs sampling with the given number of samples.
