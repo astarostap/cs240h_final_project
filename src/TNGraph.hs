@@ -83,5 +83,3 @@ divideGraphValuesBy graph denominator =
 	where
 		(TNGraph {table = t1, graphType = gt1, vertexValues = values1}) = graph
 		newValues = if (denominator == 0) then M.toList values1 else map (\x -> (fst x, ((snd x) / denominator) :: Float)) (M.toList values1)
-
-graph = buildTNGraphFromInfo TNDGraph ([(1, 2), (1, 3), (2, 4), (5, 7), (1,2),(1,2)], M.fromList [(1,1),(2,0.45),(3,1),(4,0.45),(5,0.45),(6,0.45),(7,0.45)])
